@@ -1,0 +1,50 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "raycast-ai-safari-bookmark-search",
+  "title": "Safari Bookmark Search",
+  "description": "Find Safari bookmarks by what a page does and see where you saved it.",
+  "icon": "safari-bookmark-search-icon.png",
+  "author": "mikeoertli",
+  "platforms": [
+    "macOS"
+  ],
+  "categories": [
+    "Web"
+  ],
+  "license": "MIT",
+  "version": "0.1.0",
+  "commands": [
+    {
+      "name": "search-bookmarks",
+      "title": "Search Safari Bookmarks by Intent",
+      "description": "Describe a saved page and find its Safari bookmark and folder.",
+      "mode": "view"
+    }
+  ],
+  "preferences": [
+    {
+      "name": "useAI",
+      "type": "checkbox",
+      "label": "Rerank Matches with Raycast AI",
+      "description": "Send your query and up to 30 candidate bookmarks' metadata to Raycast AI.",
+      "default": true,
+      "required": false
+    }
+  ],
+  "dependencies": {
+    "@raycast/api": "2.10.1"
+  },
+  "devDependencies": {
+    "@raycast/eslint-config": "2.2.0",
+    "@types/node": "26.6.5",
+    "@types/react": "19.3.0",
+    "eslint": "10.14.0",
+    "typescript": "6.0.3"
+  },
+  "scripts": {
+    "dev": "ray develop",
+    "build": "ray build -e dist -o dist",
+    "lint": "ray lint",
+    "typecheck": "tsc --noEmit"
+  }
+}
